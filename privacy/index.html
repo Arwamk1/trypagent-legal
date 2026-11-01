@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TryPagent — Privacy Policy</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<h1>TryPagent — Privacy Policy</h1>
+<p class="meta">Last updated: November 1, 2026</p>
+
+<p>TryPagent is a private content tool operated by <strong>Ahmed Saad</strong>, an individual ("we"). It prepares photo posts
+for the operator's own social media accounts. Every post is reviewed and approved by a person before anything is sent.
+For TikTok, approved photo posts are sent to the operator's own TikTok account inbox, and the operator finishes and
+publishes them manually in the TikTok app. TryPagent does not publish to TikTok directly. It is not offered to the public.</p>
+
+<h2>Who uses TryPagent</h2>
+<p>Only the operator and the TikTok account the operator connects. No other people sign in, and TryPagent does not
+collect information about other TikTok users.</p>
+
+<h2>What we receive from TikTok</h2>
+<ul>
+<li>When the operator authorizes TryPagent with TikTok Login Kit, TikTok returns an access token, a refresh token,
+their expiry times, the granted scopes and the account's <code>open_id</code>.</li>
+<li>Scopes requested: <code>video.upload</code> (to send photo posts to the account's TikTok inbox) and
+<code>user.info.basic</code> (granted with Login Kit; TryPagent does not call TikTok's user information API).</li>
+<li>After each upload, TikTok returns an upload ID and its processing status, which TryPagent checks.</li>
+<li>We do not access followers, messages, analytics, other users' data or existing posts.</li>
+</ul>
+
+<h2>What we send to TikTok</h2>
+<ul>
+<li>Approved photos (as public HTTPS links that TikTok downloads), the post caption with hashtags, and a short title
+(the product name).</li>
+</ul>
+
+<h2>How we use the data</h2>
+<p>The tokens are used only to send approved photo posts to the connected account's inbox and to check the status of
+those uploads. Nothing is published by TryPagent; publishing happens only when the operator completes the post in the
+TikTok app.</p>
+
+<h2>Where data is stored</h2>
+<ul>
+<li><strong>TikTok tokens</strong> are stored in a local file on the operator's computer, not in a database, chat or
+logs; log output masks them. The access token is renewed automatically shortly before it expires; a new refresh token
+replaces the old one.</li>
+<li><strong>The account's open_id</strong>, upload IDs, statuses and published post links are stored in a local database
+on the operator's computer.</li>
+<li><strong>Images</strong> to be posted are stored at public HTTPS addresses in the operator's Supabase Storage so that
+TikTok can download them.</li>
+</ul>
+
+<h2>Third-party services</h2>
+<ul>
+<li><strong>TikTok</strong> (Login Kit, Content Posting API) — receives the photos, captions and titles the operator approved.</li>
+<li><strong>Supabase</strong> — stores generated and approved images at public URLs, and saves content records.</li>
+<li><strong>OpenAI</strong> — writes captions and edits product images using public product information. No TikTok
+account data is sent to OpenAI.</li>
+<li><strong>Tavily and Apify</strong> — public web search and public trend information used to research products. No
+TikTok account data is sent to them.</li>
+<li><strong>Telegram</strong> — the operator's private review chat; it shows previews and status, never tokens.</li>
+<li><strong>Instagram (Meta) and Buffer</strong> — used separately to publish to the operator's Instagram account and,
+as an alternative route, to remind the operator to publish on TikTok. TryPagent's TikTok tokens are not shared with them.</li>
+</ul>
+
+<h2>Retention and deletion</h2>
+<ul>
+<li>TikTok tokens are kept until the operator disconnects the account. To disconnect: revoke TryPagent's access in the
+TikTok app (Settings and privacy, then Security and permissions, then Apps and services permissions, or the current
+equivalent) and delete the local token file. After that, no further uploads are possible.</li>
+<li>Images on Supabase Storage are kept until they are deleted manually. TryPagent does not delete them automatically.</li>
+<li>Upload records (open_id, upload IDs, statuses and post links) are kept in the local database until they are deleted
+manually.</li>
+<li>To ask for deletion of data related to your TikTok account, contact us at the address below.</li>
+</ul>
+
+<h2>Sharing and sale</h2>
+<p>We do not sell TikTok data and do not share it with anyone except the services listed above, for the purposes
+described.</p>
+
+<h2>Children</h2>
+<p>TryPagent is not directed to children and does not knowingly process children's data.</p>
+
+<h2>Contact</h2>
+<p>Ahmed Saad — <a href="mailto:ahmedsaadpa01@gmail.com">ahmedsaadpa01@gmail.com</a></p>
+
+<h2>Changes</h2>
+<p>Updates to this policy are published at this address with a new date.</p>
+
+<p class="nav"><a href="../terms/">Terms of Service</a></p>
+</main>
+</body>
+</html>
