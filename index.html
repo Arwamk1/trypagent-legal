@@ -4,16 +4,97 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>TryPagent</title>
+<meta name="description" content="TryPagent is an internal content workflow that one creator uses to prepare, review and publish photo posts for his own social media accounts.">
+<link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="site">
+  <div class="bar">
+    <a class="brand" href="./"><img src="icon.png" alt="" width="36" height="36"> TryPagent</a>
+    <nav>
+      <a href="#how">How it works</a>
+      <a href="#tiktok">TikTok</a>
+      <a href="#data">Data</a>
+      <a href="#contact">Contact</a>
+      <a href="terms/">Terms of Service</a>
+      <a href="privacy/">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
 <main>
-<h1>TryPagent</h1>
-<p>A private content tool operated by Ahmed Saad, an individual, for his own social media accounts.</p>
+<section class="hero">
+  <img src="icon.png" alt="TryPagent icon" width="96" height="96">
+  <div>
+    <h1>TryPagent</h1>
+    <p class="lead">An internal content workflow that one creator uses to prepare, review and publish photo posts about
+    products for his own social media accounts.</p>
+    <p class="note">TryPagent is operated by Ahmed Saad, an individual. It is not offered to the public: there is no
+    sign-up, no paid plan and no other users.</p>
+  </div>
+</section>
+
+<section id="how">
+<h2>How it works</h2>
+<ol class="steps">
+  <li><strong>Request.</strong> The operator starts a request in his private Telegram chat and chooses the product
+  category, country, content type (for example a review or a comparison), number of products and target account.
+  Nothing starts before he confirms.</li>
+  <li><strong>Research.</strong> TryPagent finds products from public web results and public trend information, checks
+  each product's official page and image, and skips products already posted on the same account.</li>
+  <li><strong>Writing and images.</strong> Captions and slide text are written with AI in a fixed persona voice, from
+  documented facts only. Product photos may be edited with AI to place the real product in a consistent setting. The
+  text is then written on the images locally.</li>
+  <li><strong>Review.</strong> The operator sees every image that will be published, in order, with the full caption,
+  and can edit, regenerate or reject. Only an approved version can be scheduled.</li>
+  <li><strong>Scheduling.</strong> The operator chooses the platform and time. Instagram posts are published
+  automatically at that time. TikTok posts are sent to the TikTok app for the operator to finish (see below).</li>
+  <li><strong>Result.</strong> The post link is recorded, and the product is not posted again on the same account for
+  the same content type.</li>
+</ol>
+</section>
+
+<section id="tiktok">
+<h2>TikTok integration</h2>
 <ul>
-<li><a href="terms/">Terms of Service</a></li>
-<li><a href="privacy/">Privacy Policy</a></li>
+  <li><strong>Login Kit (desktop):</strong> the operator connects his own TikTok account once from his computer. TikTok
+  asks for <code>user.info.basic</code> and <code>video.upload</code>.</li>
+  <li><strong>Content Posting API — Upload:</strong> an approved photo post is sent to the account's TikTok inbox
+  (<code>MEDIA_UPLOAD</code>, photos downloaded by TikTok from a verified URL prefix).</li>
+  <li><strong>Finished by a person:</strong> the operator opens the inbox notification, reviews the post in TikTok's
+  editor, and publishes it himself. TryPagent never publishes to TikTok directly (Direct Post is not used).</li>
 </ul>
+</section>
+
+<section>
+<h2>What TryPagent does not do</h2>
+<ul>
+  <li>It does not publish to TikTok directly or post without the operator's approval.</li>
+  <li>It does not sign in other users, post to accounts that did not authorize it, or comment, follow, like or send
+  messages.</li>
+  <li>It does not sell or share data beyond the services listed in the Privacy Policy.</li>
+</ul>
+</section>
+
+<section id="data">
+<h2>Data</h2>
+<p>TikTok access tokens stay in a local file on the operator's computer and are never shown in chat or logs. Images to
+be posted are stored at public addresses on the operator's Supabase Storage so that TikTok and Instagram can download
+them. Data is kept until it is deleted manually. Details: <a href="privacy/">Privacy Policy</a> and
+<a href="terms/">Terms of Service</a>.</p>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<p>Ahmed Saad — <a href="mailto:ahmedsaadpa01@gmail.com">ahmedsaadpa01@gmail.com</a>. Use this address for questions
+and for data deletion requests.</p>
+</section>
 </main>
+
+<footer class="site">
+  <a href="terms/">Terms of Service</a> · <a href="privacy/">Privacy Policy</a> · <a href="#contact">Contact</a>
+  <span>© 2026 Ahmed Saad</span>
+</footer>
 </body>
 </html>

@@ -6,3 +6,20 @@ h2 { font-size: 20px; margin: 28px 0 8px; }
 code { background: #f6f8fa; padding: 1px 4px; border-radius: 4px; }
 a { color: #0969da; }
 .nav { margin-top: 32px; }
+
+/* Front page */
+header.site { border-bottom: 1px solid #d1d9e0; background: #f6f8fa; }
+header.site .bar { max-width: 760px; margin: 0 auto; padding: 12px 16px; display: flex; flex-wrap: wrap; gap: 8px 20px;
+  align-items: center; justify-content: space-between; }
+header.site .brand { display: flex; align-items: center; gap: 10px; font-weight: 600; color: #1f2328; text-decoration: none; }
+header.site .brand img { border-radius: 8px; }
+header.site nav { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 15px; }
+.hero { display: flex; gap: 20px; align-items: flex-start; }
+.hero img { border-radius: 20px; flex: none; }
+.lead { font-size: 18px; margin: 4px 0 8px; }
+.note { color: #59636e; margin: 0; }
+.steps li { margin-bottom: 8px; }
+footer.site { border-top: 1px solid #d1d9e0; max-width: 760px; margin: 0 auto; padding: 16px; display: flex;
+  flex-wrap: wrap; gap: 6px 12px; color: #59636e; font-size: 15px; }
+footer.site span { margin-left: auto; }
+@media (max-width: 560px) { .hero { flex-direction: column; } footer.site span { margin-left: 0; } }
